@@ -1,0 +1,21 @@
+{% extends "template.html" %}
+{% block conteudo %}
+        <table class="table table-striped table-responsive table-bordered">
+            <thead
+                <tr>
+                    <th>Nome</th>
+                    <th>Cargo</th>
+                    <th>Setor</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for funcionario in funcionarios %}
+                <tr>
+                    <td>{{ funcionario.nome }}</td>
+                    <td>{{ funcionario.cargo }}</td>
+                    <td>{{ funcionario.setor }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}
